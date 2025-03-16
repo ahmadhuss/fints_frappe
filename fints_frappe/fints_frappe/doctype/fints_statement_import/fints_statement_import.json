@@ -1,0 +1,235 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2025-03-02 20:16:04.730295",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series_details_section",
+  "naming_series",
+  "statement_details_section",
+  "fints_account",
+  "transaction_mode",
+  "start_date",
+  "last_date",
+  "connection_steps_section",
+  "step_1_column",
+  "mechanism_connected",
+  "btn_set_mechanism",
+  "selected_mechanism_id",
+  "step_2_column",
+  "account_get",
+  "btn_get_accounts",
+  "selected_account_iban",
+  "meta_information_section",
+  "sync_count",
+  "sync_timestamp",
+  "session_state_information_section",
+  "pause_dialog_state",
+  "tan_data_response",
+  "column_break_xglb",
+  "from_data_state",
+  "challenge",
+  "statement_json_tab",
+  "sync_history_table_details_section",
+  "sync_history"
+ ],
+ "fields": [
+  {
+   "fieldname": "statement_details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "description": "The selected FinTS account.",
+   "fieldname": "fints_account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "FinTS Account",
+   "options": "FinTS Settings",
+   "reqd": 1
+  },
+  {
+   "fieldname": "statement_json_tab",
+   "fieldtype": "Tab Break",
+   "label": "Sync History"
+  },
+  {
+   "depends_on": "eval:doc.transaction_mode==\"Custom\"",
+   "description": "First day to fetch.",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Star Date",
+   "mandatory_depends_on": "eval:doc.transaction_mode==\"Custom\""
+  },
+  {
+   "depends_on": "eval:doc.transaction_mode==\"Custom\"",
+   "description": "Last day to fetch.",
+   "fieldname": "last_date",
+   "fieldtype": "Date",
+   "label": "Last Date",
+   "mandatory_depends_on": "eval:doc.transaction_mode==\"Custom\""
+  },
+  {
+   "fieldname": "meta_information_section",
+   "fieldtype": "Section Break",
+   "label": "Meta Information"
+  },
+  {
+   "fieldname": "sync_count",
+   "fieldtype": "Int",
+   "label": "Transaction Sync Count",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "session_state_information_section",
+   "fieldtype": "Section Break",
+   "label": "Session State Information"
+  },
+  {
+   "description": "This field represents Pause Dialog State. It is used to pause an ongoing FinTS (HBCI) banking session.",
+   "fieldname": "pause_dialog_state",
+   "fieldtype": "Long Text",
+   "label": "Pause Dialog State"
+  },
+  {
+   "description": "The serialized NeedTANResponse.",
+   "fieldname": "tan_data_response",
+   "fieldtype": "Long Text",
+   "label": "TAN Data Response"
+  },
+  {
+   "fieldname": "column_break_xglb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "From Data Deconstruct represents FinTSClient instance state. We can reuse this state to control th behavior of the Pause Dialog.",
+   "fieldname": "from_data_state",
+   "fieldtype": "Long Text",
+   "label": "From Data"
+  },
+  {
+   "description": "A copy of the challenge message (e.g., Please enter TAN for \u2026).\n\n",
+   "fieldname": "challenge",
+   "fieldtype": "Long Text",
+   "label": "Challenge"
+  },
+  {
+   "fieldname": "selected_mechanism_id",
+   "fieldtype": "Data",
+   "label": "Selected Mechanism Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series_details_section",
+   "fieldtype": "Section Break",
+   "hidden": 1,
+   "label": "Naming Series Details"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "Statement-Setting-.YYYY.-.MM.-.DD.-.####"
+  },
+  {
+   "description": "The selected FinTS account.",
+   "fieldname": "transaction_mode",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Transaction Mode",
+   "options": "Fetch Last 30 Days\nFetch Last 120 Days\nCustom"
+  },
+  {
+   "fieldname": "sync_timestamp",
+   "fieldtype": "Datetime",
+   "label": "Transactions Sync Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sync_history_table_details_section",
+   "fieldtype": "Section Break",
+   "label": "Sync History Table Details"
+  },
+  {
+   "fieldname": "sync_history",
+   "fieldtype": "Table",
+   "label": "Sync History Table",
+   "options": "FinTS Statement Sync Item"
+  },
+  {
+   "fieldname": "connection_steps_section",
+   "fieldtype": "Section Break",
+   "label": "Connection Steps"
+  },
+  {
+   "fieldname": "step_1_column",
+   "fieldtype": "Column Break",
+   "label": "Step 1"
+  },
+  {
+   "default": "0",
+   "fieldname": "mechanism_connected",
+   "fieldtype": "Check",
+   "label": "Mechanism Connected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "btn_set_mechanism",
+   "fieldtype": "Button",
+   "label": "Set Mechanism"
+  },
+  {
+   "fieldname": "step_2_column",
+   "fieldtype": "Column Break",
+   "label": "Step 2"
+  },
+  {
+   "default": "0",
+   "fieldname": "account_get",
+   "fieldtype": "Check",
+   "label": "Account Get",
+   "read_only": 1
+  },
+  {
+   "fieldname": "btn_get_accounts",
+   "fieldtype": "Button",
+   "label": "Get Account"
+  },
+  {
+   "fieldname": "selected_account_iban",
+   "fieldtype": "Data",
+   "label": "Selected Account IBAN",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2025-03-05 09:48:21.030321",
+ "modified_by": "Administrator",
+ "module": "Fints Frappe",
+ "name": "FinTS Statement Import",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

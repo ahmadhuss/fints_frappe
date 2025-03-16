@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-04 22:47:24.986988",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "statement_sync_details_section",
+  "sync_timestamp",
+  "total",
+  "start_date",
+  "end_date",
+  "sync_json"
+ ],
+ "fields": [
+  {
+   "fieldname": "statement_sync_details_section",
+   "fieldtype": "Section Break",
+   "label": "Statement Sync Details"
+  },
+  {
+   "fieldname": "sync_timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Sync Timestamp",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sync_json",
+   "fieldtype": "JSON",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Sync Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Total",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Start Date",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "End Date",
+   "non_negative": 1,
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-05 20:43:23.583813",
+ "modified_by": "Administrator",
+ "module": "Fints Frappe",
+ "name": "FinTS Statement Sync Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
