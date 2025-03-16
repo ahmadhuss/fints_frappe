@@ -1,0 +1,44 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"mdWfRZQyut\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Shortcuts</span>\",\"col\":12}},{\"id\":\"7tw-0DgNVW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"FinTS Settings\",\"col\":3}},{\"id\":\"XFw9ImJMMj\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"FinTS Statement Import\",\"col\":3}}]",
+ "creation": "2025-03-17 02:36:48.955937",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "FinTS",
+ "links": [],
+ "modified": "2025-03-17 02:53:25.868428",
+ "modified_by": "Administrator",
+ "module": "Fints Frappe",
+ "name": "FinTS",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 33.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "FinTS Settings",
+   "link_to": "FinTS Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "FinTS Statement Import",
+   "link_to": "FinTS Statement Import",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "FinTS"
+}
