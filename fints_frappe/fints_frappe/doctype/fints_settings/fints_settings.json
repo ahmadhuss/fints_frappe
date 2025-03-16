@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:login_name",
+ "creation": "2025-03-01 10:15:43.970172",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "fints_connection_section",
+  "login_name",
+  "username",
+  "password",
+  "blz",
+  "column_break_jmam",
+  "endpoint_url",
+  "product_id",
+  "erpnext_account_settings_section",
+  "company",
+  "account",
+  "column_break_asii",
+  "bank_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "fints_connection_section",
+   "fieldtype": "Section Break",
+   "label": "FinTS Connection"
+  },
+  {
+   "fieldname": "login_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Login Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "endpoint_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Endpoint URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "blz",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "BLZ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jmam",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "username",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Username",
+   "reqd": 1
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Password",
+   "label": "Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "product_id",
+   "fieldtype": "Password",
+   "label": "Product Id",
+   "reqd": 1
+  },
+  {
+   "fieldname": "erpnext_account_settings_section",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Account Settings"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "label": "Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_asii",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_account",
+   "fieldtype": "Link",
+   "label": "Bank Account",
+   "options": "Bank Account",
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2025-03-01 21:30:57.447677",
+ "modified_by": "Administrator",
+ "module": "Fints Frappe",
+ "name": "FinTS Settings",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
